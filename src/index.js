@@ -1,16 +1,32 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import Exem from "./Exem";
-import "./index.css";
-import { SaveComponent } from "./SaveComponent.js";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-const btnSaver = document.querySelector(".saver-btn");
+import Cards from "./Components/Cards";
 
-const App = () => {
+const App = function () {
   return (
-    <>
-      <Exem />
-    </>
+    <div className="container">
+      <div className="title">
+        <h1 className="heading">
+          <span>Magic</span> Notes
+        </h1>
+        <button className="toogle-btn btn-primary">Toogle Mode</button>
+      </div>
+      <div className="search-box">
+        <form>
+          <button type="submit" className="search-btn">
+            <span className="material-symbols-outlined"> search </span>
+          </button>
+          <input
+            type="text"
+            placeholder="Search for your notes..."
+            className="search-input"
+          />
+        </form>
+      </div>
+      <Cards />
+    </div>
   );
 };
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
