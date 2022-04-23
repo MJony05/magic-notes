@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import Cards from "./Components/Cards";
-
+import "./index.css";
 const App = function () {
   return (
     <div className="container">
