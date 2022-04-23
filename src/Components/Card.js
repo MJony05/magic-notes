@@ -1,17 +1,24 @@
 import React from "react";
-const Card = function () {
+import "./style/card.css";
+const Card = function (props) {
+  console.log(props);
   return (
     <>
-      <div class="card">
-        <textarea class="input-note"></textarea>
-        <div class="card-info">
-          <p class="card-date">03/11/2021</p>
+      <li className="card" key={props.value.id}>
+        <textarea
+          className="input-note"
+          defaultValue={props.value.text}
+        ></textarea>
+        <div className="card-info">
+          <p className="card-date">{props.value.date}</p>
           <p>
-            <button class="saver-btn btn-primary">Save</button>
-            <span class="material-symbols-outlined hidden">delete_forever</span>
+            <button className="saver-btn btn-primary">Save</button>
+            <span className="material-symbols-outlined hidden">
+              delete_forever
+            </span>
           </p>
         </div>
-      </div>
+      </li>
     </>
   );
 };
