@@ -30,3 +30,15 @@ li {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
 }
+.current-card {
+  border: 2px solid black;
+}
+.input-note::placeholder {
+  color: white;
+}
+.delete-note-btn {
+  color: rgb(124, 4, 4);
+}
+.delete-note-btn:hover {
+  cursor: pointer;
+}

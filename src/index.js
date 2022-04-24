@@ -9,7 +9,15 @@ const App = function () {
         <h1 className="heading">
           <span>Magic</span> Notes
         </h1>
-        <button className="toogle-btn btn-primary">Toogle Mode</button>
+        <button
+          className="toogle-btn btn-primary"
+          onClick={(e) => {
+            console.log(e.target.closest(".container").classList);
+            document.body.classList.toggle("dark");
+          }}
+        >
+          Toogle Mode
+        </button>
       </div>
       <div className="search-box">
         <form>

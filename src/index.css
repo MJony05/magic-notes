@@ -48,9 +48,12 @@ body {
   background-color: transparent;
 }
 .search-input {
+  display: inline-block;
   font-size: 1.2rem;
   border: none;
   outline: none;
+  background-color: transparent;
+  width: 100%;
 }
 button:hover {
   cursor: pointer;
@@ -59,4 +62,8 @@ button:hover {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+}
+.dark {
+  background-color: #3b3b3b;
+  color: white;
 }
