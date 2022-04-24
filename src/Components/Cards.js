@@ -14,20 +14,17 @@ class Cards extends React.Component {
   }
   delete(id) {
     let newState = this.state.arr.filter((el) => {
-      return el.id != id;
+      return el.id !== id;
     });
     this.setState({ arr: newState });
   }
 
   render() {
-    delete "121212";
     return (
       <>
         <div className="main">
           {this.state.arr.map((el) => {
-            return (
-              <Card key={el.id.toString()} value={el} func={this.delete} />
-            );
+            return <Card key={el.id} value={el} func={this.delete} />;
           })}
           <li className="card current-card">
             <textarea

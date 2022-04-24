@@ -14,7 +14,7 @@ const Card = function (props) {
           <p
             className="delete-note-btn"
             onClick={(e) => {
-              props.func(e.target.closest(".card").id);
+              props.func(+e.target.closest(".card").id);
             }}
           >
             <span className="material-symbols-outlined">delete_forever</span>

@@ -24,12 +24,6 @@ li {
   justify-content: space-between;
   align-items: center;
 }
-
-.main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
-}
 .current-card {
   border: 2px solid black;
 }
