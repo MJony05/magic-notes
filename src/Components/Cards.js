@@ -31,9 +31,6 @@ class Cards extends React.Component {
     return (
       <>
         <div className="main">
-          {this.state.arr.map((el) => {
-            return <Card key={el.id} value={el} func={this.delete} />;
-          })}
           <li className="card current-card">
             <textarea
               className="input-note crt-input"
@@ -61,7 +58,7 @@ class Cards extends React.Component {
                         id: new Date().getTime(),
                       };
 
-                      let newItem = [...this.state.arr, this.newNote];
+                      let newItem = [this.newNote, ...this.state.arr];
 
                       this.setState({ arr: newItem, letter: 100 });
                       localStorage.setItem("cards", JSON.stringify(newItem));
@@ -79,6 +76,9 @@ class Cards extends React.Component {
               </p>
             </div>
           </li>
+          {this.state.arr.map((el) => {
+            return <Card key={el.id} value={el} func={this.delete} />;
+          })}
         </div>
       </>
     );

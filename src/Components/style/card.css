@@ -4,7 +4,7 @@ li {
 .card {
   border-radius: 20px;
   padding: 1rem;
-  background-image: linear-gradient(to top, #00a559, #00ba8b);
+  background-image: linear-gradient(to top, #3366cc, #4c81eb);
 }
 .input-note {
   width: 100%;
