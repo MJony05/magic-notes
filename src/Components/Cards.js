@@ -17,8 +17,16 @@ class Cards extends React.Component {
       return el.id !== id;
     });
     this.setState({ arr: newState });
+    localStorage.setItem("cards", JSON.stringify(newState));
   }
-
+  getLocal() {
+    const saved = JSON.parse(localStorage.getItem("cards"));
+    return saved;
+  }
+  componentDidMount() {
+    if (!this.getLocal()) return;
+    this.setState({ arr: this.getLocal() });
+  }
   render() {
     return (
       <>
@@ -56,7 +64,7 @@ class Cards extends React.Component {
                       let newItem = [...this.state.arr, this.newNote];
 
                       this.setState({ arr: newItem, letter: 100 });
-
+                      localStorage.setItem("cards", JSON.stringify(newItem));
                       inn.value = "";
                     } else {
                       alert("note cant be empty. Please type something");
