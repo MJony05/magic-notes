@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/magic-notes/static/css/main.cb14e6b2.css",
+    "main.js": "/magic-notes/static/js/main.fae09edc.js",
+    "index.html": "/magic-notes/index.html",
+    "main.cb14e6b2.css.map": "/magic-notes/static/css/main.cb14e6b2.css.map",
+    "main.fae09edc.js.map": "/magic-notes/static/js/main.fae09edc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cb14e6b2.css",
+    "static/js/main.fae09edc.js"
+  ]
+}
